@@ -100,6 +100,7 @@ public class EmployeeProcessorJobConfig {
 		return employeeRequest -> {
 			Optional<Employee> existingEmployee = employeeRepository.findById(employeeRequest.getEmployeeId());
 			Employee employee = existingEmployee.orElse(new Employee());
+			employee.setEmployeeId(employeeRequest.getEmployeeId());
 			employee.setFirstName(employeeRequest.getFirstName());
 			employee.setLastName(employeeRequest.getLastName());
 			employee.setEmail(employeeRequest.getEmail());
