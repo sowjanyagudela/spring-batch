@@ -33,11 +33,6 @@ public class EmployeeController {
 	@Autowired
 	private CommonService commonService;
 
-	@GetMapping("/test")
-	public String testApp() {
-		return "Hello Spring Batch";
-	}
-
 	@GetMapping
 	public EmployeeResponse getEmployee(@RequestParam(required = false) Integer id,
 			@RequestParam(required = false) String email) {
@@ -71,11 +66,5 @@ public class EmployeeController {
 					(endTime - startTime) / 1000 + "Seconds");
 		}
 		return employeeResponse;
-	}
-
-	@PostMapping
-	public ResponseEntity<Employee> saveProduct(@RequestBody @Valid Employee employeeDto) {
-		Employee employee = employeeService.saveEmployee(employeeDto);
-		return ResponseEntity.ok(employee);
 	}
 }
