@@ -1,0 +1,5 @@
+employeeId,firstName,lastName,email,phoneNumber,doj,salary
+1,John,Doe,john.doe@example.com,555-1234,2024-01-15,55000
+2,Jane,Smith,jane.smith@example.com,555-5678,2024-02-20,60000
+3,Bob,Johnson,bob.johnson@example.com,555-8765,2024-03-10,62000
+4,Emily,Davis,emily.davis@example.com,555-4321,2024-04-05,58000
